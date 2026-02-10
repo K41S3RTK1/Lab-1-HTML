@@ -1,27 +1,55 @@
-# COYA Adventure - Racing Driver (HTML Only)
+# The Last Race: Lewis Hamilton COYA
 
-This repository contains a small “Choose Your Own Adventure” (COYA) story built using only HTML pages and links.
+A small Choose Your Own Adventure** story made with only HTML pages and links.  
+You guide Lewis Hamilton, an F1 driver, through the key decisions of his final race.
 
-## Story
-You are a racing driver. During a chaotic race you must make decisions about risk, strategy, and weather.
-Your choices lead to three independent endings:
-- Good ending
-- Neutral ending
-- Bad ending
+**Author:** Daniel Sandoval - 24885
 
-## Entry point
-Open:
+---
+
+## Overview
+
+This project uses multiple HTML files. Every page includes:
+- an image
+- a short scene
+- at least **two choices** using links
+
+No CSS and no JavaScript were used.
+
+---
+
+## Technologies Used
+- HTML
+- NGINX
+- Git and GitHub
+
+---
+
+## Getting Started
+
+### How to open the story (local)
+Open this file in your browser:
 - `inicio/index.html`
 
-## Folder structure
-- `inicio/` start pages
-- `rutas/` scenes/routes
-- `finales/` endings
-- `img/` images used by pages
+---
 
-## How it works
-Each page provides at least two decisions using HTML links (`<a>`).
-No CSS and no JavaScript are used.
+## Link of the Video
+- 
 
-## How to run
-Open `inicio/index.html` in your browser.
+---
+
+## Open in the browser (NGINX)
+- `http://localhost:8080/adventure/inicio/index.html`
+
+---
+
+## Installation and Deployment (NGINX)
+
+This is how I served it with NGINX on macOS (Homebrew):
+
+```bash
+PREFIX="$(brew --prefix)"
+sudo rm -rf "$PREFIX/var/www/adventure"
+sudo mkdir -p "$PREFIX/var/www/adventure"
+sudo cp -R ~/Documents/laboratorio1-adventure/* "$PREFIX/var/www/adventure/"
+sudo chmod -R 755 "$PREFIX/var/www/adventure"
